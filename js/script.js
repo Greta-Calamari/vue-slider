@@ -48,13 +48,22 @@ const app = new Vue({
                 this.indexActive -= 1
             }
 
+        },
+        autoScroll(){
+            
+            this.intervalId = setInterval(()=>{
+                this.nextSlide()
+            },3000)
+
+        },
+        stopAutoscroll(){
+            clearInterval(this.intervalId)
+            this.intervalId = null
         }
 
     },
     mounted(){
-        this.intervalId = setInterval(()=>{
-            this.
-        },3000)
+        this.autoScroll()
 
     }
 
