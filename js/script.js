@@ -33,9 +33,28 @@ const app = new Vue({
 
     },
     methods:{
+        nextSlide(){
+            if(this.indexActive === 4){
+                this.indexActive = 0
+            }else{
+                this.indexActive += 1
+            }
+
+        },
+        prevSlide(){
+            if(this.indexActive === 0){
+                this.indexActive = 4
+            }else{
+                this.indexActive -= 1
+            }
+
+        }
 
     },
-    mounted:{
+    mounted(){
+        this.intervalId = setInterval(()=>{
+            this.
+        },3000)
 
     }
 
